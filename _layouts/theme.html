@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="theme">
+  <section class="thumbnail">
+    <img src="{{page.thumbnail}}">
+  </section>
+  <header>
+    <h1>
+      <a href="{{page.package_url}}">{{page.title}}</a>
+        by
+      <a href="{{page.author_url}}">{{page.author}}</a>
+    </h1>
+  </header>
+  <section class="content">
+    {{ content }}
+
+    <h2>Install</h2>
+
+    <code>$ apm install {{ page.package_name }}</code>
+  </section>
+  <footer>
+    <span class="tags">{{ page.tags | array_to_sentence_string }}</span>
+  </footer>
+</article>
