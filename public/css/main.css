@@ -20,6 +20,15 @@ article.theme.summary .content span {
   display: block;
 }
 
+article.theme.full .tags {
+  opacity: 0.6;
+
+  display: block;
+
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;
