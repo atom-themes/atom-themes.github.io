@@ -1,12 +1,17 @@
 article.theme.summary aside.thumbnail {
   width: 40%;
   float: right;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 article.theme.summary .content {
   width: 60%;
-  float: left;
   padding-right: 1rem;
+}
+
+article.theme.summary .content span {
+  display: block;
 }
 
 .clearfix:after {
