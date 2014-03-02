@@ -1,0 +1,10 @@
+---
+layout: theme
+thumbnail:
+title:
+tags:
+author:
+author_url:
+package_url:
+package_name:
+---
