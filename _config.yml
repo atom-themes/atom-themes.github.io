@@ -1,3 +1,24 @@
-name: Atom Themes
-markdown: redcarpet
-pygments: true
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            atomthem.es
+tagline:          'Atom Themes Galore'
+description:      'Want to Submit a Theme? <ul><li>Fork the site on GitHub</li><li>Create a new post in the `_posts` directory and fill out the relevant YAML fields</li><li>Make a 400x200 thumbnail and drop it in the thumbnails directory. List its filename in the posts markdown file.</li><li>Test it out, then push your changes up and open a pull request.</li></ul>'
+url:              http://atomthem.es
+
+author:
+  name:           'Rhys Powell & Tony Guntharp'
+  url:            http://atomthem.es/
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/atom-themes/atom-themes.github.io
