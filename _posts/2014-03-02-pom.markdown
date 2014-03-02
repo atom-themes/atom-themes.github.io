@@ -1,0 +1,12 @@
+---
+layout: theme
+thumbnail: /public/thumbnails/pom.png
+title: Pom
+tags: dark ui flat
+author: scott-riley
+author_url: https://github.com/scott-riley
+package_url: https://atom.io/packages/pom
+package_name: pom
+---
+
+> A dark theme for Atom that you might like or might hate or whatever I dunno.
