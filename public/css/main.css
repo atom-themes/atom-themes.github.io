@@ -1,0 +1,38 @@
+article.theme.summary {
+  padding-bottom: 2rem;
+}
+
+@media (min-width : 30rem ) {
+  article.theme.summary aside.thumbnail {
+    width: 40%;
+    float: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  article.theme.summary .content {
+    width: 60%;
+    padding-right: 1rem;
+  }
+}
+
+article.theme.summary .content span {
+  display: block;
+}
+
+article.theme.full .tags {
+  opacity: 0.6;
+
+  display: block;
+
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}

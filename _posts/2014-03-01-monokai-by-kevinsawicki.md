@@ -2,9 +2,15 @@
 layout: theme
 thumbnail: /public/thumbnails/monokai.png
 title: Monokai
-tags: dark, featured
+tags: dark featured syntax
 author: kevinsawicki
 author_url: https://github.com/kevinsawicki
 package_url: https://atom.io/packages/monokai
 package_name: monokai
 ---
+
+A theme originally created by [Wimer Hazenberg](http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/), who had this to say about it:
+
+> It’s very pleasing to the eyes, yes? And colorful too. Ooooooooh, it’s such a pleasure to work in this warm and friendly environment.
+
+Monokai's bright, saturated colours nevertheless manage to be very easy on the eyes.

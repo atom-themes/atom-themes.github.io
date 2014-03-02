@@ -172,6 +172,9 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-item p:last-child {
   margin-bottom: 0;
 }
+.sidebar-item img {
+  margin: 0;
+}
 
 /* Sidebar nav */
 .sidebar-nav {

@@ -5,16 +5,24 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-    {{ post.content }}
-  </div>
+  <article class="theme summary clearfix">
+    <aside class="thumbnail">
+      <img src="{{ post.thumbnail }}">
+    </aside>
+    <section class="content">
+      <header>
+        <h1 class="post-title">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+      </header>
+      <span class="author"><i class="fa fa-user"></i> <a href="{{post.author_url}}">{{post.author}}</a></span>
+      <span class="tags"><i class="fa fa-tag"></i> {{ post.tags | array_to_sentence_string }}</span>
+      <span class="install-command"><i class="fa fa-terminal"></i> <code>apm install {{ post.package_name }}</code></span>
+    </section>
+  </article>
   {% endfor %}
 </div>
 

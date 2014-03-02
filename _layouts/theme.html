@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="theme">
+<article class="theme full">
   <section class="thumbnail">
     <img src="{{page.thumbnail}}">
   </section>
@@ -16,11 +16,27 @@ layout: default
   <section class="content">
     {{ content }}
 
-    <h2>Install</h2>
+    <h2><i class="fa fa-terminal"></i> Install It</h2>
 
     <code>$ apm install {{ page.package_name }}</code>
   </section>
   <footer>
-    <span class="tags">{{ page.tags | array_to_sentence_string }}</span>
+    <span class="tags"><i class="fa fa-tag"></i> {{ page.tags | array_to_sentence_string }}</span>
   </footer>
 </article>
+
+<div class="related">
+  <h2>Related Themes</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
