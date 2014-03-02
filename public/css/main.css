@@ -1,13 +1,19 @@
-article.theme.summary aside.thumbnail {
-  width: 40%;
-  float: right;
-  padding-top: 2rem;
+article.theme.summary {
   padding-bottom: 2rem;
 }
 
-article.theme.summary .content {
-  width: 60%;
-  padding-right: 1rem;
+@media (min-width : 30rem ) {
+  article.theme.summary aside.thumbnail {
+    width: 40%;
+    float: right;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  article.theme.summary .content {
+    width: 60%;
+    padding-right: 1rem;
+  }
 }
 
 article.theme.summary .content span {
