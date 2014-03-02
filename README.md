@@ -4,7 +4,7 @@ Hey there! This site was developed by [Rhys Powell](http://rpowell.me) and [Tony
 
 * Fork the site on GitHub
 * Create a new post in the `_posts` directory and fill out the relevant YAML fields
-* Make a 400x200 thumbnail and drop it in the thumbnails directory. List its filename in the posts markdown file.
+* Make a 720x400 thumbnail and drop it in the thumbnails directory. List its filename in the posts markdown file.
 * Test it out, then push your changes up and open a pull request.
 
 ## Tools
