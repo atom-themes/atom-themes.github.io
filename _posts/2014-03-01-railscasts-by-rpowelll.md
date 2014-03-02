@@ -2,7 +2,7 @@
 layout: theme
 thumbnail: /public/thumbnails/railscasts.png
 title: RailsCasts
-tags: dark, syntax
+tags: dark syntax
 author: rpowelll
 author_url: https://github.com/rpowelll
 package_url: https://atom.io/packages/railscasts-syntax
