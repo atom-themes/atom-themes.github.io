@@ -1,0 +1,18 @@
+article.theme.summary aside.thumbnail {
+  width: 40%;
+  float: right;
+}
+
+article.theme.summary .content {
+  width: 60%;
+  float: left;
+  padding-right: 1rem;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
