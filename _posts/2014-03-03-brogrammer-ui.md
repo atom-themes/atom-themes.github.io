@@ -6,6 +6,7 @@ tags: dark ui pushups animation
 author: kenwheeler
 author_url: https://github.com/kenwheeler/brogrammer-ui
 package_url: https://atom.io/packages/brogrammer-ui
+package_name: brogrammer-ui
 ---
 
 Pushup Powered UI Theme. Looks great with and without shades on.
