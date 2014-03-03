@@ -7,6 +7,7 @@ author: dmackerman
 author_url: https://github.com/dmackerman/atom-soda-dark-ui
 package_url: https://atom.io/packages/atom-soda-dark-ui
 package_name: atom-soda-dark-ui
+date: 2014-03-03 05:55:18 -0800
 ---
 A port of the Soda Dark theme for Atom. All credit for the design inspiration goes to the original soda crew: https://github.com/buymeasoda/soda-theme/
 

@@ -7,6 +7,7 @@ author: moonsspoon
 author_url: https://github.com/moonsspoon/atom-dark-ui-slim
 package_url: https://atom.io/packages/atom-dark-ui-slim
 package_name: atom-dark-ui-slim
+date: 2014-03-03 06:38:18 -0800
 ---
 * Slim tree-view
 * Slim tabs

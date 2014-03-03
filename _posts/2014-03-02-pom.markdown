@@ -7,6 +7,7 @@ author: scott-riley
 author_url: https://github.com/scott-riley/pom
 package_url: https://atom.io/packages/pom
 package_name: pom
+date: 2014-03-02 10:22:04 -0800
 ---
 
 > A dark theme for Atom that you might like or might hate or whatever I dunno.
