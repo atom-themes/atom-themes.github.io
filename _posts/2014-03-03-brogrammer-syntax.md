@@ -6,6 +6,7 @@ tags: dark ui pushups
 author: kenwheeler
 author_url: https://github.com/kenwheeler/brogrammer-syntax
 package_url: https://atom.io/packages/brogrammer-syntax
+package_name: brogrammer-syntax
 ---
 
 Pushup Powered Syntax Hotness. Looks great with the Brogrammer UI Theme
