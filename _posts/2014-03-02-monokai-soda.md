@@ -3,7 +3,7 @@ layout: theme
 thumbnail: /public/thumbnails/monokai-soda.png
 title: Monokai Soda
 tags: dark syntax
-author: Abe Estrada
+author: AbeEstrada
 author_url: https://github.com/AbeEstrada/monokai-soda
 package_url: https://atom.io/packages/monokai-soda
 package_name: monokai-soda
