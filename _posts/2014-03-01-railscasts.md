@@ -4,7 +4,7 @@ thumbnail: /public/thumbnails/railscasts.png
 title: RailsCasts
 tags: dark syntax
 author: rpowelll
-author_url: https://github.com/rpowelll
+author_url: https://github.com/rpowelll/railscasts-syntax
 package_url: https://atom.io/packages/railscasts-syntax
 package_name: railscasts-syntax
 ---
