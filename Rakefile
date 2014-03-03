@@ -1,71 +1,69 @@
-# == Dependencies ==============================================================
+require "rubygems"
+require "bundler/setup"
+require "stringex"
 
-require 'rake'
-require 'yaml'
-require 'fileutils'
-require 'rbconfig'
+# Variables
+posts_dir       = "_posts"
+new_post_ext    = "md"
 
-# == Configuration =============================================================
+#######################
+# Working with Jekyll #
+#######################
 
-# Set "rake watch" as default task
-task :default => :watch
-
-# Load the configuration file
-CONFIG = YAML.load_file("_config.yml")
-
-# Get and parse the date
-DATE = Time.now.strftime("%Y-%m-%d")
-
-# Directories
-POSTS = "_posts"
-
-# == Helpers ===================================================================
-
-# Execute a system command
-def execute(command)
-  system "#{command}"
+# rake build
+desc "Build atomthem.es site"
+task :build do
+  puts "## Generating Site with Jekyll"
+  system "jekyll build"
 end
 
-# Chech the title
-def check_title(title)
-  if title.nil? or title.empty?
-    raise "Please add a title to your file."
+# rake watch
+desc "Serve and watch atomthem.es"
+task :watch do
+  system "jekyll serve -w"
+end
+
+# rake preview
+desc "Launch a preview of atomthem.es in the browser"
+task :preview do
+    port = 4000
+  Thread.new do
+    puts "Launching browser for preview..."
+    sleep 5
+    system("#{open_command} http://localhost:#{port}/")
   end
+  Rake::Task[:watch].invoke
 end
 
-# Transform the filename and date to a slug
-def transform_to_slug(title, extension)
-  characters = /("|'|!|\?|:|\s\z)/
-  whitespace = /\s/
-  "#{title.gsub(characters,"").gsub(whitespace,"-").downcase}.#{extension}"
-end
-
-# Read the template file
-def read_file(template)
-  File.read(template)
-end
-
-# Save the file with the title in the YAML front matter
-def write_file(content, title, directory, filename)
-  parsed_content = "#{content.sub("title:", "title: \"#{title}\"")}"
-  File.write("#{directory}/#{filename}", parsed_content)
-  puts "#{filename} was created in '#{directory}'."
-end
-
-# Create the file with the slug and open the default editor
-def create_file(directory, filename, content, title, editor)
-  if File.exists?("#{directory}/#{filename}")
-    raise "The file already exists."
+# usage rake new_post[my-new-post] or rake new_post['my new post']
+desc "Create a new theme in #{posts_dir}"
+task :new_theme, :title do |t, args|
+  if args.title
+    title = args.title
   else
-    write_file(content, title, directory, filename)
-    if editor && !editor.nil?
-      sleep 1
-      execute("#{editor} #{directory}/#{filename}")
-    end
+    title = get_stdin("Enter a title for your post: ")
+  end
+  filename = "#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: theme"
+    post.puts "thumbnail: /public/thumbnails/"
+    post.puts "title: #{title.gsub(/&/,'&amp;')}"
+    post.puts "tags: "
+    post.puts "author: "
+    post.puts "author_url: "
+    post.puts "package_url: "
+    post.puts "package_name: "
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
+    post.puts "---"
   end
 end
 
-# Get the "open" command
+# Get the "open" command for rake preview
 def open_command
   if RbConfig::CONFIG["host_os"] =~ /mswin|mingw/
     "start"
@@ -76,47 +74,7 @@ def open_command
   end
 end
 
-# == Tasks =====================================================================
-
-# rake post["Title"]
-desc "Create a post in _posts"
-task :post, :title do |t, args|
-  title = args[:title]
-  template = CONFIG["post"]["template"]
-  extension = CONFIG["post"]["extension"]
-  editor = CONFIG["editor"]
-  check_title(title)
-  filename = "#{DATE}-#{transform_to_slug(title, extension)}"
-  content = read_file(template)
-  create_file(POSTS, filename, content, title, editor)
-end
-
-# rake build
-desc "Build the site"
-task :build do
-  execute("jekyll build")
-end
-
-# rake watch
-desc "Serve and watch the site"
-task :watch, :option do |t, args|
-  option = args[:option]
-  if option.nil? or option.empty?
-    execute("jekyll serve -w")
-  end
-end
-
-# rake preview
-desc "Launch a preview of the site in the browser"
-task :preview do
-  port = CONFIG["port"]
-  if port.nil? or port.empty?
-    port = 4000
-  end
-  Thread.new do
-    puts "Launching browser for preview..."
-    sleep 5
-    execute("#{open_command} http://localhost:#{port}/")
-  end
-  Rake::Task[:watch].invoke
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
 end
