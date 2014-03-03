@@ -7,6 +7,7 @@ author: atom
 author_url: https://github.com/atom/atom-mac-theme
 package_url: https://atom.io/packages/atom-mac-theme
 package_name: atom-mac-theme
+date: 2014-03-03 05:30:18 -0800
 ---
 
 Desktop styles inspired by OS X.
