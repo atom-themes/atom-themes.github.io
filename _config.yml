@@ -22,9 +22,3 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/atom-themes/atom-themes.github.io
-
-post:
-  template: _post.txt
-  extension: md
-
-editor: atom
