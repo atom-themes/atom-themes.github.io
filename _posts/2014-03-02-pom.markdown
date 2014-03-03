@@ -4,7 +4,7 @@ thumbnail: /public/thumbnails/pom.png
 title: Pom
 tags: dark ui flat
 author: scott-riley
-author_url: https://github.com/scott-riley
+author_url: https://github.com/scott-riley/pom
 package_url: https://atom.io/packages/pom
 package_name: pom
 ---

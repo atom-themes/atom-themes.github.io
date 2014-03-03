@@ -4,7 +4,7 @@ thumbnail: /public/thumbnails/made-of-code.png
 title: Made of Code
 tags: dark syntax
 author: fusion94
-author_url: https://github.com/fusion94
+author_url: https://github.com/fusion94/MadeOfCode
 package_url: https://atom.io/packages/made-of-code
 package_name: made-of-code
 ---
