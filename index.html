@@ -21,7 +21,7 @@ title: Home
         <span class="post-date">{{ post.date | date_to_string }}</span>
       </header>
       <span class="author"><i class="fa fa-user"></i> <a href="{{post.author_url}}">{{post.author}}</a></span>
-      <span class="tags"><i class="fa fa-tag"></i> {{ post.tags | array_to_sentence_string }}</span>
+      <span class="tags"><i class="fa fa-tag"></i> {{ post.tags | join: ', ' }}</span>
       <span class="install-command"><i class="fa fa-terminal"></i> <code>apm install {{ post.package_name }}</code></span>
     </section>
   </article>
