@@ -7,10 +7,7 @@ Hey there! This site was developed by [Rhys Powell](http://rpowell.me) and [Tony
 
 ## Want to Submit a Theme?
 
-* Fork the site on GitHub
-* Create a new post in the `_posts` directory and fill out the relevant YAML fields
-* Make a 720x400 thumbnail and drop it in the thumbnails directory. List its filename in the posts markdown file.
-* Test it out, then push your changes up and open a pull request.
+We'd greatly appreciate any contributions to this site. For information on contributing posts, check our [contribution guidelines](https://github.com/atom-themes/atom-themes.github.io/blob/master/CONTRIBUTING.md) on GitHub.
 
 ## Tools
 
