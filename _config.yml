@@ -9,7 +9,8 @@ permalink:        pretty
 title:            atomthem.es
 tagline1:         'Showcasing'
 tagline2:         'themes from the Atom community'
-description:      'Want to Submit a Theme? <ul><li>Fork the site on GitHub</li><li>Create a new post in the `_posts` directory and fill out the relevant YAML fields</li><li>Make a 720x400 thumbnail and drop it in the thumbnails directory. List its filename in the posts markdown file.</li><li>Test it out, then push your changes up and open a pull request.</li></ul>'
+description:      'atomthem.es is a showcase of some of the great themes the Atom community has put together.'
+>>>>>>> Added link to contribution guidelines in sidebar
 url:              http://atomthem.es
 
 author:
