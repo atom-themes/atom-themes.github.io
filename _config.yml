@@ -24,3 +24,5 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/atom-themes/atom-themes.github.io
+
+exclude: [CONTRIBUTING.md, Gemfile, Gemfile.lock, LICENSE.md, README.md, Rakefile]
