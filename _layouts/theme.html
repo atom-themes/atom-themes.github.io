@@ -21,7 +21,7 @@ layout: default
     <code>$ apm install {{ page.package_name }}</code>
   </section>
   <footer>
-    <span class="tags"><i class="fa fa-tag"></i> {{ page.tags | array_to_sentence_string }}</span>
+    <span class="tags"><i class="fa fa-tag"></i> {{ page.tags | join: ', ' }}</span>
   </footer>
 </article>
 
